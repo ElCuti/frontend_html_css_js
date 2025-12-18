@@ -2,6 +2,8 @@ body {
     background-color: #f5f5f5;
 }
 
-header, footer{
-    
+header,
+footer {
+    width: 500px;
+    text-align: center;
 }
