@@ -61,7 +61,7 @@ select {
     float: left;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    width: 20px;
+    width: 15px;
     background-color: #ced4da;
     border: Ipx solid #ced4da;
     padding: IOpx;
@@ -71,5 +71,9 @@ select {
 }
 
 #email {
-    width: 70%;
+    width: 95%;
+}
+
+#nick {
+    width: 85%;
 }
