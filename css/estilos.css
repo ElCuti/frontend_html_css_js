@@ -77,3 +77,12 @@ select {
 #nick {
     width: 85%;
 }
+
+#error {
+    text-align: center;
+    color: #fd0c49;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
