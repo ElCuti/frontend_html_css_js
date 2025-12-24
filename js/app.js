@@ -1,12 +1,12 @@
-const entradaNombre = document.getElementById('nick');
-entradaNombre.value = "Paco";
-console.log(entradaNombre.value);
+const botonJugar = document.getElementById("jugar");
 
-
-const tamanyoInput = document.getElementById('tamano');
-console.log(tamanyoInput.value)
-console.log(tamanyoInput.options[tamanyoInput.selectedIndex].text)
-
-function test() {
-    alert("TEST!");
+function comprobarForm() {
+    alert("TEST")
 }
+function ejecutarAccion() {
+    alert("Doble TEST")
+    botonJugar.removeEventListener('click', ejecutarAccion);
+}
+
+botonJugar.addEventListener('click', comprobarForm);
+botonJugar.addEventListener('click', ejecutarAccion);
