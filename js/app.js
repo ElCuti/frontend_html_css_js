@@ -8,14 +8,13 @@ const error = document.getElementById("error");
 // FUNCIONES DE EVENTO
 function comprobarForm(event) {
     // COMPROBAR CAMBIOS
-    if (nickInput.value == "") {
+    if (nickInput.value.match(/(?<!\S)[0-9]/)) {
         event.preventDefault();
         nickInput.focus();
-        error.innerText = "El campo de nick no puede estar vacío";
+        error.innerText = "El campo nick no puede comenzar con un numero";
         return false;
-
     }
-    else if (tamanoInput.value == "0") {
+    if (tamanoInput.value == "0") {
         event.preventDefault();
         tamanoInput.focus();
         error.innerText = "El tamaño de juego debe estar definido";
