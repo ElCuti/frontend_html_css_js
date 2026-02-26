@@ -20,7 +20,8 @@ function comprobarForm(event) {
         error.innerText = "El tamaño de juego debe estar definido";
         return false;
     }
-
+    datosUsuario(nickInput);
+    return true;
 }
 
 // INICIO DE CARGA DE EVENTO
