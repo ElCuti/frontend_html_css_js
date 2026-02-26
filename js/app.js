@@ -5,6 +5,12 @@ const tamanoInput = document.getElementById("tamano");
 const formEntrada = document.getElementById("formEntrada");
 const error = document.getElementById("error");
 
+//Comprobación de error de HTML
+if (sessionStorage.getItem("error")) {
+    error.innerText = sessionStorage.getItem("error");
+    sessionStorage.removeItem("error");
+}
+
 // FUNCIONES DE EVENTO
 function comprobarForm(event) {
     // COMPROBAR CAMBIOS
