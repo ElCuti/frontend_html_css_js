@@ -22,3 +22,21 @@ function checkDatosUser() {
     return true;
 
 }
+
+function historicoUsuario(nick) {
+    let historicoStorage = localStorage.getItem('historico');
+    let historico;
+    if (historicoStorage == null) {
+        let historico = [];
+    }
+    else {
+        historico = JSON.parse(historicoStorage);
+    }
+    let registroUsurio = {
+        nick: nick.value,
+        fecha: Date.now()
+    }
+
+    historico.push(registroUsurio);
+    localStorage.setItem('historico', JSON.stringify(historico));
+}

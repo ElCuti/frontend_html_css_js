@@ -11,6 +11,7 @@ if (sessionStorage.getItem("error")) {
     sessionStorage.removeItem("error");
 }
 
+
 // FUNCIONES DE EVENTO
 function comprobarForm(event) {
     // COMPROBAR CAMBIOS
@@ -27,6 +28,7 @@ function comprobarForm(event) {
         return false;
     }
     datosUsuario(nickInput);
+    historicoUsuario(nickInput);
     return true;
 }
 
