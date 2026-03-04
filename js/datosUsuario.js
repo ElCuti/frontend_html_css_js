@@ -2,6 +2,7 @@
 JS PARA LA GESTION DE LOS DATOS DEL USER
 */
 var nick;
+var geolocalizacionTxt;
 
 function datosUsuario(nick) {
     sessionStorage.setItem("nick", nick.value);
@@ -21,6 +22,24 @@ function checkDatosUser() {
     }
     return true;
 
+}
+
+function datoGeolocalizacion() {
+    if (!navigator.geolocation) {
+        geolocalizacionTxt = "El navegador no es compatible con API Geolocation";
+    }
+    else {
+        navigator.geolocation.getCurrentPosition(
+            // Callback de Éxito
+            (position) => {
+                geolocalizacionTxt = 'Latitud: ' + position.coords.latitude + ', longitud: ' + position.coords.longitude;
+            },
+            // Callback de Error
+            () => {
+                geolocalizacionTxt = "La geolocalización no se ha podido realizar";
+            }
+        );
+    }
 }
 
 function historicoUsuario(nick) {
