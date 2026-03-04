@@ -4,14 +4,20 @@ JS PARA LA GESTION DE LOS DATOS DEL USER
 var nick;
 var geolocalizacionTxt;
 
-function datosUsuario(nick) {
+function datosUsuario(nick, email, tamano) {
     sessionStorage.setItem("nick", nick.value);
+    sessionStorage.setItem("email", email.value);
+    sessionStorage.setItem("tamano", tamano.value);
+    sessionStorage.setItem("geolocalizacion", geolocalizacionTxt);
+
 
 }
 
 function getDatosUsuario() {
     nick = sessionStorage.getItem("nick");
-    console.log(nick);
+    email = sessionStorage.getItem("email");
+    tamano = sessionStorage.getItem("ntamanok");
+    geolocalizacion = sessionStorage.getItem("geolocalizacion");
 
 }
 

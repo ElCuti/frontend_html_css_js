@@ -3,8 +3,9 @@
 const nickInput = document.getElementById("nick");
 const tamanoInput = document.getElementById("tamano");
 const formEntrada = document.getElementById("formEntrada");
+const email = document.getElementById("email");
 const error = document.getElementById("error");
-
+email
 //Comprobación de error de HTML
 if (sessionStorage.getItem("error")) {
     error.innerText = sessionStorage.getItem("error");
@@ -27,7 +28,7 @@ function comprobarForm(event) {
         error.innerText = "El tamaño de juego debe estar definido";
         return false;
     }
-    datosUsuario(nickInput);
+    datosUsuario(nickInput, tamanoInput, email);
     historicoUsuario(nickInput);
     return true;
 }
