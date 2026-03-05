@@ -51,12 +51,13 @@ function datoGeolocalizacion() {
 function historicoUsuario(nick) {
     let historicoStorage = localStorage.getItem('historico');
     let historico;
+
     if (historicoStorage == null) {
-        let historico = [];
-    }
-    else {
+        historico = [];
+    } else {
         historico = JSON.parse(historicoStorage);
     }
+
     let registroUsurio = {
         nick: nick.value,
         fecha: Date.now()
